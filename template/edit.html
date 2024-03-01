@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Update Task</title>
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+    <div class="form-group">
+            <form method="POST"  >
+                {% csrf_token %}
+                {{f.as_table}}
+                <input type="submit" class="btn btn-success" >
+
+            </form>
+    </div>
+</div>
+
+
+
+{% endblock %}
